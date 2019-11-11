@@ -8,9 +8,9 @@
     mc:Ignorable="d" RequestedTheme="Dark">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image Source="Assets/halloween.jpg" Tapped="Image_Tapped" HorizontalAlignment="Center" VerticalAlignment="Center" Height="389" Width="722" />
+        <Image Source="Assets/lights-out.jpg" Tapped="Image_Tapped" HorizontalAlignment="Center" VerticalAlignment="Center" Height="389" Width="722" />
         <TextBlock HorizontalAlignment="Center" Height="72" Margin="0,30" TextWrapping="Wrap" TextAlignment="Center"
-                   Text="Lights Out! by Frank McCown" VerticalAlignment="Top" Width="520" FontSize="36"/>
+                   Text="Lights Out! by Lauren Bolin" VerticalAlignment="Top" Width="520" FontSize="36"/>
         <TextBlock HorizontalAlignment="Center" Height="63" Margin="0,100" TextWrapping="Wrap" TextAlignment="Center"
                    Text="Turn all the lights off to win!" VerticalAlignment="Top" Width="479" FontSize="30"/>
     </Grid>

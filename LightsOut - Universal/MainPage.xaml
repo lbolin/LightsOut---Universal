@@ -14,5 +14,7 @@
                 Content="New Game" RelativePanel.AlignLeftWith="boardCanvas" RelativePanel.Below="boardCanvas" />
         <Button x:Name="aboutButton" HorizontalAlignment="Center" Height="61" Width="120" Click="aboutGameButton_Click" 
                 Content="About" RelativePanel.AlignRightWith="boardCanvas" RelativePanel.Below="boardCanvas" />
+        <Button x:Name="settingButton" Height="61" Width="120" Click="settingButton_Click" 
+            Content="Settings" RelativePanel.Below="boardCanvas" RelativePanel.AlignHorizontalCenterWith="boardCanvas"/>
     </RelativePanel>
 </Page>

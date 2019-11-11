@@ -143,6 +143,31 @@ namespace LightsOut___Universal
         private void aboutGameButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AboutPage));
-        }    
+        }
+
+        private void settingButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Settings));
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            string json = JsonConvert.SerializeObject(game);
+            ApplicationData.Current.LocalSettings.Values["gameData"] = json;
+           
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (ApplicationData.Current.LocalSettings.Values.ContainsKey("gameData"))
+            {
+                string json = ApplicationData.Current.LocalSettings.Values["gameData"] as string;
+                game = JsonConvert.DeserializeObject<LightsOutGame>(json);
+            }
+            CreateGrid();
+            DrawGrid();
+        }
+
+
     }
 }

@@ -31,12 +31,57 @@ namespace LightsOut___Universal
                 }
             }
         }
+        public string Grid
+        {
+            get
+            {
+                string TF = "";
+                // Write this method to convert the 2D grid array into "TFTTFFTTT"
+                for(int i = 0; i<GridSize;i++)
+                {
+                    for(int j = 0; j<GridSize;j++)
+                    {
+                        if (grid[i,j])
+                        {
+                            TF += "T";
+                        }
+                        else
+                        {
+                            TF += "F";
+                        }
+                    }
+                }
+                return TF;
+            }
+            set
+            {
+                // Write this method to set the 2D grid array to values from "TFTTFFTTT"
+                for(int i = 0; i<GridSize;i++)
+                {
+                    for(int j = 0; j<GridSize;j++)
+                    {
+                        if(value[i * gridSize + j] == 'T')
+                        {
+                            grid[i, j] = true;
+                        }
+                        else
+                        {
+                            grid[i, j] = false;
+
+                        }
+                        
+                    }
+                }
+
+            }
+        }
 
         public LightsOutGame()
         {
             rand = new Random();
             GridSize = MinGridSize;            
         }
+
 
         public bool GetGridValue(int row, int col)
         {
@@ -91,5 +136,6 @@ namespace LightsOut___Universal
             // All values must be false (off)
             return true;
         }
+        
     }
 }
